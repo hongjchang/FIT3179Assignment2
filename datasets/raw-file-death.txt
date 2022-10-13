@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/akarlinsky/world_mortality/main/world_mortality.csv

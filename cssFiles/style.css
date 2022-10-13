@@ -1,0 +1,30 @@
+body{
+	background-color: rgba(169, 215, 233, 0.45);
+	font-family: 'Ubuntu', sans-serif;
+	margin-top: 2%;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 2%;
+}
+
+h1{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.page {
+	width: 850px;
+	background-color: white;
+	margin: auto;
+	padding: 50px;
+	padding-top: 35px;
+	border-radius: 30px;
+}
+
+blockquote {
+	font-weight:bold;
+	font-family: Consolas;
+}
+
+.vis-container {
+	width: 100%;
+}

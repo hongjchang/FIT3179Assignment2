@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Number of Disciple in Religions in the World between 2010 and 2020",
+  "repeat": ["Christians","Muslims","Unaffiliated","Hindus","Buddhists","FolkReligions","OtherReligions","Jews","AllReligions"],
+  "columns": 2,
+  "params": [
+    {
+      "name": "year_select",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2020,
+        "step": 10,
+        "name": "Select Year to Filter: "
+      }
+    }
+  ],
+  "spec": {
+    "width": 300,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/hongjchang/Week10Homework/main/datasets/MODIFIED_religion_by_num_of_population.csv"
+    },
+    "transform": [{"filter": "year(datum.Year) == year_select"}],
+    "mark": {"type": "bar", "cornerRadiusTopLeft":5, "cornerRadiusTopRight": 5},
+    "encoding": {
+      "x": {
+        "field": {"repeat": "repeat"}, "type": "nominal"
+      },
+      "y": {
+        "aggregate": "count", "type": "quantitative"
+      },
+      "color": {
+        "field": "Region",
+        "type": "nominal",
+        "title": "Number of Disciples"
+      },
+      "tooltip": [
+        {"field": "Year", "type": "ordinal", "title": "Year"},
+        {"field": "Region", "type": "nominal", "title": "Region"},
+        {"field": {"repeat": "repeat"}, "type": "quantitative", "title": "Total Number of Disciples", "format": ".4s"}
+      ]
+    }
+  },
+  "config": {}
+}
