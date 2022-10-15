@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!--Embedding Vega-Lite vis-->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
@@ -14,31 +15,57 @@
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="cssFiles/style.css" media="all">
 
-    <!--Title of the page and favicon-->
-    <link rel="icon" href="" type="image/x-icon">
-    <title>Worldwide Population By Country - Assignment 2</title>
-
     <!--Importing Ubuntu font style for body from https://fonts.google.com/share?selection.family=Ubuntu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!--Title of the page and favicon-->
+    <link rel="icon" href="logo-icon.png" type="image/x-icon">
+    <title>Worldwide Population By Country - Assignment 2</title>
 </head>
 
 <body>
+    <!--Closable banner-->
+    <div id="fixed-alert">
+        <button id="btn-dismiss" data-dismiss="alert">&times; Close</button>
+        <i>Kind reminder: You can <b>hover over</b> the subheadings with "i" to view details for each visualisations.</i>
+    </div>
+    <script>
+        var btn = document.querySelector('#btn-dismiss');
+        btn.addEventListener("click", function(){
+            var alert = document.querySelector('#fixed-alert');
+            alert.style.display = 'none';
+        });
+    </script>
+
+    <!--Main content-->
     <div class="page">
         <h1>Worldwide Population in 2020</h1>
-        <p style="font-size:13px;color:grey;font-family:Comic Sans MS;">Created on 22/09/2022, Last Edited on 11/10/2022 By HongJie Chang</p>
-        <blockquote>Lorem ipsum abcd one two three four testing description.</blockquote>
+        <blockquote>This page is about the worldwide population in year 2020. It will show the total population of all countries in the world in 2020 as well as top religions, deaths and births, total CO<sub>2</sub> emissions from people</blockquote>
         <hr>
 
-        <h2>Vis 1</h2>
+        <div class="tooltip">
+            <h2>Vis 1<sup>&#8505;</sup></h2>
+            <span class="tooltipText">Interact with the 3 sliders below for filter effects.</span>
+        </div>
         <div id="vis1" class="vis-container"></div>
-        <br/>
+    </div>
 
-        <h2>Vis 2</h2>
+    <div class="page">
+        <div class="tooltip">
+            <h2>Vis 2<sup>&#8505;</sup></h2>
+            <span class="tooltipText">Interact with the year slider to see year changes.</span>
+        </div>
         <div id="vis2" class="vis-container"></div>
     </div>
 
+    <!--Footer-->
+    <div class="div-footer">
+        <p>No copyright &copy 2022 &#8901; Webpage created by HongJie Chang &#8901; Last modified 15/10/2022 &#8901; <a href="https://github.com/hongjchang/FIT3179Assignment2" target="_blank" rel="noopener noreferrer" onclick="alert('You are about to going to my GitHub repository. Are you sure? If you\'re a student too, don\'t direct copy my work, alright?');">GitHub repository</a></p>
+    </div>
+
+    <!--Script for embeds-->
     <script type="text/javascript">
         var spec1 = "js/choropleth_map.vg.json";
         var spec2 = "js/religion.vg.json";

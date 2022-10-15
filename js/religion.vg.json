@@ -20,7 +20,7 @@
     "width": 300,
     "height": 300,
     "data": {
-      "url": "https://raw.githubusercontent.com/hongjchang/Week10Homework/main/datasets/MODIFIED_religion_by_num_of_population.csv"
+      "url": "https://raw.githubusercontent.com/hongjchang/FIT3179Assignment2/main/datasets/religion_by_num_of_population.csv"
     },
     "transform": [{"filter": "year(datum.Year) == year_select"}],
     "mark": {"type": "bar", "cornerRadiusTopLeft":5, "cornerRadiusTopRight": 5},
