@@ -31,6 +31,12 @@
     - W3Schools (2022). Create tooltips. Retrieved from: https://www.w3schools.com/howto/howto_css_tooltip.asp
     - StackOverflow (2014). How to make a closable banner in pure javascript. Retrieved from: https://stackoverflow.com/a/26957495
 
+- Changes made since progress of this directory:
+    - StackOverflow (2019). Vega Lite legend for multi-field data. [Used in `religion.vg.json` file for transform fold] Retrieved from: https://stackoverflow.com/a/58732341
+    - Codeinwp (2020). List of all countries in JSON. [Used in `areachrt_death.vg.json` file] Retrieved from: https://www.codeinwp.com/snippets/list-of-all-countries-html-select-javascript-and-json-format/#countries-array
+    - Text annotations in `linechrt_concat.vg.json` file is adapted from week10 lab part 1.2
+    - Vega-Lite (2022). Area Chart for `areachrt_death.vg.json` file. Retrieved from: https://vega.github.io/vega-lite/examples/area_gradient.html
+
 - From Week10Homework:
     - The `oceans.topojson` file **had changed** and was adapted from [here](https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson).
     - Edstem.org (2022). [countries csv file](https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/data/countryInfo.csv) for `choropleth_map.vg.json` file. Retrieved from: https://edstem.org/au/courses/8853/discussion/1051935?answer=2351836

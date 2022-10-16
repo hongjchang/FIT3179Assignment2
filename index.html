@@ -55,25 +55,41 @@
     <div class="page">
         <div class="tooltip">
             <h2>Vis 2<sup>&#8505;</sup></h2>
-            <span class="tooltipText">Interact with the year slider to see year changes.</span>
+            <span class="tooltipText">Click on the legend for highlight filter.</span>
         </div>
         <div id="vis2" class="vis-container"></div>
     </div>
 
+    <div class="page">
+            <h2>Vis 3</h2>
+        <div id="vis3" class="vis-container"></div>
+
+        <div class="tooltip">
+            <h2>Vis 4<sup>&#8505;</sup></h2>
+            <span class="tooltipText">Interact with the <b>slider</b> to change years.<br/>Interact with the <b>drop-down list</b> to change countries.<br/><u>If no data are shown, probably there's no data for the country chosen.</u></span>
+        </div>
+        <div id="vis4" class="vis-container"></div>
+    </div>
+
     <!--Footer-->
     <div class="div-footer">
-        <p>No copyright &copy 2022 &#8901; Webpage created by HongJie Chang &#8901; Last modified 15/10/2022 &#8901; <a href="https://github.com/hongjchang/FIT3179Assignment2" target="_blank" rel="noopener noreferrer" onclick="alert('Redirect Notice\nYou are about to going to my GitHub repository.');">GitHub repository</a></p>
+        <p>No copyright &copy 2022 &#8901; Webpage created by HongJie Chang &#8901; Last modified 17/10/2022 &#8901; <a href="https://github.com/hongjchang/FIT3179Assignment2" target="_blank" rel="noopener noreferrer" onclick="alert('Redirect Notice\nYou are about to going to my GitHub repository.');">GitHub repository</a></p>
     </div>
 
     <!--Script for embeds-->
     <script type="text/javascript">
         var spec1 = "js/choropleth_map.vg.json";
         var spec2 = "js/religion.vg.json";
+        var spec3 = "js/linechrt_concat.vg.json";
+        var spec4 = "js/areachrt_death.vg.json";
 
         vegaEmbed('#vis1', spec1, /*{actions: false}*/).then(function(result) {
         }).catch(console.error);
-
         vegaEmbed('#vis2', spec2, /*{actions: false}*/).then(function(result) {
+        }).catch(console.error);
+        vegaEmbed('#vis3', spec3, /*{actions: false}*/).then(function(result) {
+        }).catch(console.error);
+        vegaEmbed('#vis4', spec4, /*{actions: false}*/).then(function(result) {
         }).catch(console.error);
     </script>
 </body>
