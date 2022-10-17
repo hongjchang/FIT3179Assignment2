@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": 400,
-    "title": "The Most Population in the World in 2020",
+    "title": "World Most Population in 2020",
     "autosize": {"resize": true},
     "projection": {"type": "equalEarth", "scale": {"expr": "map_zooming"}, "rotate": {"expr": "[horizontalRotate, verticalRotate, 0]"}},
     "data": {
@@ -101,12 +101,13 @@
           "text": {"field": "properties.NAME", "type": "nominal"},
           "opacity": {
             "condition": {
-              "test": "datum['properties.NAME'] == 'China' || datum['properties.NAME'] == 'Brazil' || datum['properties.NAME'] == 'India' || datum['properties.NAME'] == 'Australia' || datum['properties.NAME'] == 'Malaysia'",
+              "test": "datum['properties.NAME'] == 'China' || datum['properties.NAME'] == 'Brazil' || datum['properties.NAME'] == 'India' || datum['properties.NAME'] == 'Australia' || datum['properties.NAME'] == 'Malaysia' || datum['properties.NAME'] == 'Russia'",
               "value": 1
             },
             "value": 0
           }
         }
       }
-    ]
+    ],
+    "config": { "style": {"cell": {"stroke": "transparent"}}}
 }

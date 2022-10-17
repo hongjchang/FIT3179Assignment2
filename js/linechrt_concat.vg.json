@@ -5,15 +5,18 @@
   },
   "vconcat": [
     {
-      "title": "The Fertility Rate of All Countries in 2020",
+      "title": "Fertility Rate of All Countries",
       "width": "container",
       "height": 130,
       "layer": [
         {
+          "params": [
+            {"name": "movearound","select": "interval","bind": "scales"}
+          ],
           "mark": {"type": "rect", "interpolate": "monotone", "color": "lightblue", "strokeWidth": 0.2, "stroke": "blue"},
           "encoding": {
             "x": {"field": "Country", "type": "nominal", "title": "Country", "axis": {"labels": false}},
-            "y": {"field": "FertRate", "type": "quantitative", "title": ""},
+            "y": {"field": "FertRate", "type": "quantitative", "title": "", "scale": {"domain": [0,5]}},
             "tooltip": [
               {"field": "Country", "type": "nominal", "title": "Country"},
               {"field": "FertRate", "type": "quantitative", "title": "Fertility Rate"}
@@ -22,7 +25,7 @@
         },
         {
           "transform": [{"calculate": "'The country with highest ' + 'fertility rate is ' + datum['Country']", "as": "text_annotation"}],
-          "mark": {"type": "text", "align": "left","baseline": "middle", "dx": 130, "dy": -60, "color": "darkorange", "font": "Times New Roman"},
+          "mark": {"type": "text", "align": "left","baseline": "middle", "dx": 130, "dy": -60, "color": "darkorange"},
           "encoding": {
             "text": {"field": "text_annotation", "type": "nominal"}, 
             "opacity": {"condition": {"test": "datum['FertRate'] >= 7"}, "value": 1}
@@ -33,7 +36,7 @@
     {
       "width": "container",
       "height": 200,
-      "title": "The Median Age of All Countries in 2020",
+      "title": "Median Age of All Countries",
       "mark": {"type": "point", "point": {"filled": true}},
       "encoding": {
         "x": {"field": "Country", "type": "nominal", "title": "Country", "axis": {"labels": false}},

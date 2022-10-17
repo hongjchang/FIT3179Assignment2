@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of Deaths by Country Between 2015 and 2022",
+  "title": "Yearly Number of Deaths by Country",
   "params": [
     {
       "name": "year_select",
@@ -38,7 +38,6 @@
   "encoding": {
     "x": {"field": "time", "type": "temporal", "timeUnit": "month", "title": "Month"},
     "y": {"field": "deaths", "type": "quantitative", "title": "Number of Deaths"},
-    
     "tooltip": [
       {"field": "year", "type": "ordinal", "title": "Year"},
       {"field": "time", "type": "ordinal", "timeUnit": "month", "title": "Month"},

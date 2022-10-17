@@ -27,24 +27,28 @@
   "transform": [
     {"filter": "year(datum.Year) == year_select"},
     {
-      "fold": ["Christians","Muslims","Unaffiliated","Hindus","Buddhists","FolkReligions","OtherReligions","Jews","AllReligions"], "as": ["ReligionType", "ReligionNum"]
+      "fold": ["Christians","Muslims","Unaffiliated","Hindus","Buddhists","FolkReligions","OtherReligions","Jews"], "as": ["ReligionType", "ReligionNum"]
+    },
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "ReligionType", "order":"ascending"}]
     }
   ],
   "mark": {"type": "bar", "cornerRadiusTopLeft":5, "cornerRadiusTopRight": 5},
   "encoding": {
-    "x": {"field": "ReligionType", "type": "nominal", "title": "Religions"},
-    "y": {"aggregate": "count", "field": "ReligionNum", "type": "quantitative", "title": "Number of Disciples"},
+    "x": {"field": "ReligionType", "type": "nominal", "title": "Religions", "axis": {"labelAngle": -45, "labelBaseline": "alphabetic"}},
+    "y": {"field": "ReligionNum", "type": "quantitative", "title": "Number of Disciples"},
     "color": {
       "field": "Region",
       "type": "nominal",
       "title": "Regions",
       "scale": {
-        "range": ["#f6eff7","#d0d1e6","#a6bddb","#67a9cf","#3690c0","#02818a","#016450"]
+        "range": ["#88d5f7","#a2cbf6","#9ecae1","#6baed6","#4292c6","#2171b5","#084594"]
       }
     },
     "opacity": {
       "condition": {"param": "legend_selection", "value": 1},
-      "value": 0.1
+      "value": 0.2
     },
     "tooltip": [
       {"field": "Year", "type": "ordinal", "title": "Year"},
