@@ -12,7 +12,7 @@
 **Date Completed:** 17/10/2022
 
 **Notes:**
-- To find the submitted version, it is `commit_num`.
+- To find the submitted version, it is `Commit6`.
 - This whole directory was pre-created after the completion of Week9Homework.
 - Then, the html and style.css files are modified based on **Week 10 Lab Answer** folder & **Week10Homework** directory. 
 - This duplication however does not apply to GitHub repository.
