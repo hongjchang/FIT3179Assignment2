@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 300,
+    "title": "Yearly World CO2 Consumption in Years 1949 to 2020",
+    "autosize": {"resize": true},
+    "projection": {"type": "equirectangular"},
+    "params": [
+        {
+            "name": "year_slider",
+            "value": 1949,
+            "bind": {
+                "input": "range",
+                "min": 1949,
+                "max": 2020,
+                "step": 1,
+                "name": "Filter by Year: "
+            }
+        }
+    ],
+    "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/hongjchang/FIT3179Assignment2/main/js/oceans.topojson",
+                "format": {"type": "topojson", "feature": "oceans"}
+            },
+            "mark": {"type": "geoshape", "fill": "skyblue", "fillOpacity": 0.7}
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/hongjchang/FIT3179Assignment2/main/js/ne_110m_graticules_30.topojson",
+                "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+            },
+            "mark": {"type": "geoshape", "fill": null, "stroke": "black", "strokeWidth": 1, "strokeOpacity": 0.09}
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/hongjchang/FIT3179Assignment2/main/js/ne_110m_admin_0_countries.topojson",
+                "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+            },
+            "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/hongjchang/FIT3179Assignment2/main/datasets/owid-co2-data.csv"
+            },
+            "transform": [{"filter": "datum.year == year_slider"}],
+            "mark": {"type": "circle", "tooltip": {"content": "data"}},
+            "encoding": {
+                "longitude": {"field": "long", "type": "quantitative"},
+                "latitude": {"field": "lat", "type": "quantitative"},
+                "size": {
+                    "field": "co2",
+                    "type": "quantitative",
+                    "title": "CO2 Consumption"
+                },
+                "tooltip": [
+                    {"field": "country", "type": "nominal", "title": "Country"},
+                    {"field": "year", "type": "ordinal", "title": "Year"},
+                    {"field": "co2", "type": "quantitative", "title": "CO2 Consumption", "format": ".2f"}
+                ]
+            }
+          }
+    ],
+    "config": { "style": {"cell": {"stroke": "transparent"}}}
+  }

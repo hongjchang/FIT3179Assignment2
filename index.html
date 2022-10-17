@@ -15,7 +15,7 @@
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="cssFiles/style.css" media="all">
 
-    <!--Importing Ubuntu font style for body from https://fonts.google.com/share?selection.family=Ubuntu -->
+    <!--Importing Ubuntu font style for body from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -72,6 +72,18 @@
             <span class="tooltipText">Interact with the <b>slider</b> to change years.<br/>Interact with the <b>drop-down list</b> to change countries.<br/><u>If no data are shown, probably there's no data for the country chosen.</u></span>
         </div>
         <div id="vis4" class="vis-container"></div>
+
+        <div class="tooltip">
+            <h2><sup>&#8505;</sup> Yearly CO<sub>2</sub> Consumption in The World in Years 1949 to 2020</h2>
+            <span class="tooltipText">Interact with the drop-down list to select country<br/>You can click and drag the second chart for detail look.</span>
+        </div>
+        <div id="vis5" class="vis-container"></div>
+
+        <div class="tooltip">
+            <h2><sup>&#8505;</sup> Comparison of Yearly CO<sub>2</sub> Consumption in the World in Years 1949 to 2020</h2>
+            <span class="tooltipText">No details available for this visualisation.</span>
+        </div>
+        <div id="vis6" class="vis-container"></div>
     </div>
 
     <!--Footer-->
@@ -81,10 +93,12 @@
 
     <!--Script for embeds-->
     <script type="text/javascript">
-        var spec1 = "js/choropleth_map.vg.json";
+        var spec1 = "js/choropleth_map_pop.vg.json";
         var spec2 = "js/religion.vg.json";
         var spec3 = "js/linechrt_concat.vg.json";
         var spec4 = "js/areachrt_death.vg.json";
+        var spec5 = "js/linechrt_co2.vg.json";
+        var spec6 = "js/pro_sym_map_co2.vg.json";
 
         vegaEmbed('#vis1', spec1, /*{actions: false}*/).then(function(result) {
         }).catch(console.error);
@@ -93,6 +107,10 @@
         vegaEmbed('#vis3', spec3, /*{actions: false}*/).then(function(result) {
         }).catch(console.error);
         vegaEmbed('#vis4', spec4, /*{actions: false}*/).then(function(result) {
+        }).catch(console.error);
+        vegaEmbed('#vis5', spec5, /*{actions: false}*/).then(function(result) {
+        }).catch(console.error);
+        vegaEmbed('#vis6', spec6, /*{actions: false}*/).then(function(result) {
         }).catch(console.error);
     </script>
 </body>
