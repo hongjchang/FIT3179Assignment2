@@ -100,7 +100,7 @@
           "text": {"field": "properties.NAME", "type": "nominal"},
           "opacity": {
             "condition": {
-              "test": "datum['properties.NAME'] == 'China' || datum['properties.NAME'] == 'Brazil' || datum['properties.NAME'] == 'India' || datum['properties.NAME'] == 'Australia' || datum['properties.NAME'] == 'Malaysia' || datum['properties.NAME'] == 'Russia'",
+              "test": "datum['properties.NAME'] == 'China' || datum['properties.NAME'] == 'Brazil' || datum['properties.NAME'] == 'India' || datum['properties.NAME'] == 'Australia' || datum['properties.NAME'] == 'Malaysia' || datum['properties.NAME'] == 'Russia' || datum['properties.NAME'] == 'United States of America'",
               "value": 1
             },
             "value": 0
