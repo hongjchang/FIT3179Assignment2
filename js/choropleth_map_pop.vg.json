@@ -2,7 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": 400,
-    "title": "World Most Population in 2020",
     "autosize": {"resize": true},
     "projection": {"type": "equalEarth", "scale": {"expr": "map_zooming"}, "rotate": {"expr": "[horizontalRotate, verticalRotate, 0]"}},
     "data": {

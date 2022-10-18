@@ -9,28 +9,15 @@
 
 **Date Created:** 22/09/2022
 
-**Date Completed:** 17/10/2022
+**Assignment Submitted Version:** 17/10/2022 (`Commit6`)
 
-**Notes:**
-- To find the submitted version, it is `Commit6`.
-- This whole directory was pre-created after the completion of Week9Homework.
-- Then, the html and style.css files are modified based on **Week 10 Lab Answer** folder & **Week10Homework** directory. 
-- This duplication however does not apply to GitHub repository.
-- All map topojson files are using 1:110m physical and cultural from [this website](https://www.naturalearthdata.com).
+**Final Version:** 18/10/2022 (`Commit#`)
 
 **References:**
-- Datasets used:
-    - Kaggle (2020). Population by Country – 2020. Retrieved from: https://www.kaggle.com/datasets/tanuprabhu/population-by-country-2020
-    - GitHub (2022). Data on CO2 and Greenhouse Gas Emissions by Our World in Data. Retrieved from: https://github.com/owid/co2-data#%EF%B8%8F-download-our-complete-co2-and-greenhouse-gas-emissions-dataset--csv--xlsx--json
-    - Karlinsky & Kobak 2021, Tracking excess mortality across countries during the COVID-19 pandemic with the World Mortality Dataset, eLife https://doi.org/10.7554/eLife.69336. Retrieved from: https://github.com/akarlinsky/world_mortality/blob/main/world_mortality.csv
-    - Datahub (2019). World Religions Projection. Retrieved from: https://datahub.io/sagargg/world-religion-projections#resource-by_number_of_population
-
-- `index.html` formattings:
-    - Flaticon (2022). Icon used for webpage's logo icon/favicon. Retrieved from: https://www.flaticon.com/free-icon/multiple-users-silhouette_33308?term=population&page=1&position=2&page=1&position=2&related_id=33308&origin=search
-    - Toptal (2022). Information icon. Retrieved from: https://www.toptal.com/designers/htmlarrows/symbols/information-source/
-    - W3Schools (2022). Create tooltips. Retrieved from: https://www.w3schools.com/howto/howto_css_tooltip.asp
-    - StackOverflow (2014). How to make a closable banner in pure javascript. Retrieved from: https://stackoverflow.com/a/26957495
-    - Google (2022). Ubuntu font style. Retrieved from: https://fonts.google.com/share?selection.family=Ubuntu
+- This whole directory was pre-created after the completion of Week9Homework.
+- Then, the html and style.css files are modified based on **Week 10 Lab Answer** folder & **Week10Homework** directory. 
+- This duplication however does not apply to this GitHub repository.
+- All map topojson files are using 1:110m physical and cultural from [this website](https://www.naturalearthdata.com).
 
 - Changes made since progress of this directory:
     - Colorbrewer2 (2022). Colour hues of the visualisations. Retrieved from: https://colorbrewer2.org/#type=sequential&scheme=Blues&n=7
@@ -45,6 +32,20 @@
     - Vega-Lite (2022). Axis. [Used in `religion.vg.json` file to rotate the x-axis's labels] Retrieved from: https://vega.github.io/vega-lite/docs/axis.html#labels
     - Vega-Lite (2022). Line Chart with Conditional Axis Properties. [Used in `linechrt_co2.vg.json` file] Retrieved from: https://vega.github.io/vega-lite/examples/line_conditional_axis.html
     - The `pro_sym_map_co2.vg.json` file is adapted from Week 8 Lab Part 2 (Proportional Symbol Map)
+    - The CO2 dataset file has been modified (such as adding lat, long coordinates, deleting unused columns and rows and renaming the country 'Czechia' to 'Czech Republic').
+
+- Datasets used:
+    - Kaggle (2020). Population by Country – 2020. Retrieved from: https://www.kaggle.com/datasets/tanuprabhu/population-by-country-2020
+    - GitHub (2022). Data on CO2 and Greenhouse Gas Emissions by Our World in Data. Retrieved from: https://github.com/owid/co2-data#%EF%B8%8F-download-our-complete-co2-and-greenhouse-gas-emissions-dataset--csv--xlsx--json
+    - Karlinsky & Kobak 2021, Tracking excess mortality across countries during the COVID-19 pandemic with the World Mortality Dataset, eLife https://doi.org/10.7554/eLife.69336. Retrieved from: https://github.com/akarlinsky/world_mortality/blob/main/world_mortality.csv
+    - Datahub (2019). World Religions Projection. Retrieved from: https://datahub.io/sagargg/world-religion-projections#resource-by_number_of_population
+
+- `index.html` formattings:
+    - Flaticon (2022). Icon used for webpage's logo icon/favicon. Retrieved from: https://www.flaticon.com/free-icon/multiple-users-silhouette_33308?term=population&page=1&position=2&page=1&position=2&related_id=33308&origin=search
+    - Toptal (2022). Information icon. Retrieved from: https://www.toptal.com/designers/htmlarrows/symbols/information-source/
+    - W3Schools (2022). Create tooltips. Retrieved from: https://www.w3schools.com/howto/howto_css_tooltip.asp
+    - StackOverflow (2014). How to make a closable banner in pure javascript. Retrieved from: https://stackoverflow.com/a/26957495
+    - Google (2022). Ubuntu font style. Retrieved from: https://fonts.google.com/share?selection.family=Ubuntu
 
 - From Week10Homework:
     - The `oceans.topojson` file **had changed** and was adapted from [here](https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson).

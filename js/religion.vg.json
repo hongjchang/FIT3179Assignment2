@@ -51,10 +51,8 @@
       "value": 0.2
     },
     "tooltip": [
-      {"field": "Year", "type": "ordinal", "title": "Year"},
-      {"field": "Region", "type": "nominal", "title": "Region"},
-      {"field": "ReligionType", "type": "nominal", "title": "Type of Religion"},
-      {"field": "ReligionNum", "type": "quantitative", "title": "Total Number of Disciples", "format": ".4s"}
+      {"field": "Country", "type": "nominal", "title": "Specific Country"},
+      {"field": "ReligionNum", "type": "quantitative", "title": "Number of Disciples", "format": ".4s"}
     ]
   },
   "config": {}

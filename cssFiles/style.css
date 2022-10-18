@@ -12,8 +12,13 @@ h1{
 }
 
 blockquote {
-	font-weight:bold;
+	font-weight: 200;
 	font-family: Consolas;
+}
+
+/*-----Filters in Vega visualisations-----*/
+.vega-bind {
+	color: rgb(18, 84, 159);
 }
 
 /*-----Whole body content-----*/
@@ -50,7 +55,8 @@ blockquote {
 /*-----Closable banner-----*/
 #fixed-alert {
     width: 100%;
-    background-color: rgb(146, 214, 243);
+    background-color: rgb(40, 179, 239);
+	color: white;
     position: fixed;
 	top: 0;
     padding-top: 0.6%;

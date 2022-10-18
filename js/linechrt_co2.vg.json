@@ -28,7 +28,7 @@
     {
       "title": "",
       "width": "container",
-      "height": 80,
+      "height": 50,
       "params": [{"name": "brushing", "select": {"type": "interval", "encodings": ["x"]}}],
       "transform": [
         {"filter": "datum.country == country_select"}

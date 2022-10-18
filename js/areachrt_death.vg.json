@@ -39,10 +39,7 @@
     "x": {"field": "time", "type": "temporal", "timeUnit": "month", "title": "Month"},
     "y": {"field": "deaths", "type": "quantitative", "title": "Number of Deaths"},
     "tooltip": [
-      {"field": "year", "type": "ordinal", "title": "Year"},
-      {"field": "time", "type": "ordinal", "timeUnit": "month", "title": "Month"},
-      {"field": "country_name", "type": "nominal", "title": "Country"},
-      {"field": "deaths", "type": "quantitative", "title": "Number of Deaths"}
+      {"field": "deaths", "type": "quantitative", "title": "Deaths"}
     ]
   },
   "config": {}

@@ -4,7 +4,7 @@
     "height": 300,
     "title": "Yearly World CO2 Consumption in Years 1949 to 2020",
     "autosize": {"resize": true},
-    "projection": {"type": "equirectangular"},
+    "projection": {"type": "equirectangular", "scale": {"expr": "map_zooming"}, "rotate": {"expr": "[horizontalRotate, verticalRotate, 0]"}},
     "params": [
         {
             "name": "year_slider",
@@ -16,7 +16,28 @@
                 "step": 1,
                 "name": "Filter by Year: "
             }
-        }
+        },
+        {
+            "name": "map_zooming",
+            "value": 600,
+            "bind": {
+              "input": "range",
+              "min": 110,
+              "max": 610,
+              "step": 100,
+              "name": "Zoom In Out:"
+            }
+          },
+          {
+            "name": "horizontalRotate",
+            "value": -34,
+            "bind": {"input": "range", "min": -90, "max": 90, "step": 1, "name": "Left Right Rotation:"}
+          },
+          {
+            "name": "verticalRotate",
+            "value": -48,
+            "bind": {"input": "range", "min": -50, "max": 50, "step": 1, "name": "Up Down Rotation:"}
+          }
     ],
     "layer": [
         {
@@ -44,8 +65,10 @@
             "data": {
                 "url": "https://raw.githubusercontent.com/hongjchang/FIT3179Assignment2/main/datasets/owid-co2-data.csv"
             },
-            "transform": [{"filter": "datum.year == year_slider"}],
-            "mark": {"type": "circle", "tooltip": {"content": "data"}},
+            "transform": [
+                {"filter": "datum.year == year_slider"}
+            ],
+            "mark": {"type": "circle", "tooltip": {"content": "data"}, "color": "orangered"},
             "encoding": {
                 "longitude": {"field": "long", "type": "quantitative"},
                 "latitude": {"field": "lat", "type": "quantitative"},
@@ -60,7 +83,7 @@
                     {"field": "co2", "type": "quantitative", "title": "CO2 Consumption", "format": ".2f"}
                 ]
             }
-          }
+        }
     ],
     "config": { "style": {"cell": {"stroke": "transparent"}}}
   }
