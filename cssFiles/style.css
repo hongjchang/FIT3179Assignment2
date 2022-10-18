@@ -11,10 +11,13 @@ h1{
 	font-family: 'Ubuntu', sans-serif;
 }
 
-blockquote {
-	font-weight: 200;
+p {
 	font-family: Consolas;
+	text-align: justify;
 }
+
+a { color: skyblue; }
+a:hover{ color: black }
 
 /*-----Filters in Vega visualisations-----*/
 .vega-bind {
@@ -34,17 +37,17 @@ blockquote {
 
 /*-----Footer part-----*/
 .div-footer {
-	width: 850px;
+	width: 880px;
 	margin:auto;
 	margin-top: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 50px;
+	padding-left: 20px;
 	padding-right: 50px;
 	font-size:14px;
 	color:grey;
 	background-color: white;
-	border-radius: 10px;
+	border-radius: 20px;
 }
 
 /*-----Vis's container-----*/
@@ -55,7 +58,7 @@ blockquote {
 /*-----Closable banner-----*/
 #fixed-alert {
     width: 100%;
-    background-color: rgb(40, 179, 239);
+    background-color: rgb(39, 158, 250);
 	color: white;
     position: fixed;
 	top: 0;

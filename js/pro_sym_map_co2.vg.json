@@ -19,7 +19,7 @@
         },
         {
             "name": "map_zooming",
-            "value": 600,
+            "value": 310,
             "bind": {
               "input": "range",
               "min": 110,
@@ -30,12 +30,12 @@
           },
           {
             "name": "horizontalRotate",
-            "value": -34,
+            "value": 87,
             "bind": {"input": "range", "min": -90, "max": 90, "step": 1, "name": "Left Right Rotation:"}
           },
           {
             "name": "verticalRotate",
-            "value": -48,
+            "value": -40,
             "bind": {"input": "range", "min": -50, "max": 50, "step": 1, "name": "Up Down Rotation:"}
           }
     ],

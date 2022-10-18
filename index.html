@@ -12,6 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
+    <!--Responsive website-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="cssFiles/style.css" media="all">
 
@@ -42,8 +45,8 @@
     <!--Main content-->
     <div class="page">
         <h1>Worldwide Population</h1>
-        <blockquote>This page is about the worldwide population in year 2020. It shows the total population of all countries in the world in 2020 as well as top religions, deaths and births, total CO<sub>2</sub> emissions from countries.</blockquote>
-        <blockquote>The main purpose of preparing this visualisation is <b>to illustrate the number of population in the world</b> as well as other aspects like religions' popularity, number of deaths and carbon dioxide (CO<sub>2</sub>) emissions <b>in which these things are not commonly considered by most people.</b></blockquote>
+        <p>This page is about the worldwide population in year 2020. It shows the total population of all countries in the world in 2020 as well as top religions, deaths and births, total CO<sub>2</sub> emissions from countries.</p>
+        <p>The main purpose of preparing this visualisation is <b>to illustrate the number of population in the world</b> as well as other aspects like religions' popularity, number of deaths and carbon dioxide (CO<sub>2</sub>) emissions <b>in which these things are not commonly considered by most people.</b></p>
         <hr>
 
         <div class="tooltip">
@@ -59,6 +62,8 @@
             <span class="tooltipText">Click on the legend for highlight filter.<br/>Interact with the slider to view year changes.</span>
         </div>
         <div id="vis2" class="vis-container"></div>
+
+        <p>This chart shows the comparison and estimation of the number of disciples giving faith to different types of religions in the world.<br/><br/>From the chart, <u>Christian is the most popular religion</u> in the world in nowadays (year 2010). However, in the <b>next 50 years</b> (i.e. year 2050), <u>Islam/Muslim</u> would become <b>one of the most popular religion.</b></p>
     </div>
 
     <div class="page">
@@ -66,32 +71,51 @@
             <h2><sup>&#8505;</sup> The Fertility Rate and Median Age of All Countries in 2020</h2>
             <span class="tooltipText">Click and hold the first chart for interactive experience.<br/>Mouse scrolling on the first chart is fine too.</span>
         </div>
-        <div id="vis3" class="vis-container"></div>
+
+        <p style="padding-bottom:20px;">
+            The chart below shows the fertility rate in all countries in year 2020. According to the data in <a href="https://www.kaggle.com/datasets/tanuprabhu/population-by-country-2020" onclick="alert('Redirect Notice\nYou are leaving this page. Thanks for viewing!')">Kaggle</a>, looks like <b>the highest fertility rate is Niger.</b> Hence, this means Niger has the <label style="color: red;">"most reproduction rate"</label> and thus more babies born!
+            <br/><br/>
+            While in average the median age in the world is <b style="color: red">approximately 20 - 50 years old</b>, which is quite <b style="color: red;">horrifying</b> since our average lifespan is around <u>75 years.</u> As a result, maybe people nowadays needs <i>meditation and relaxation</i> from their busy and/or stressful work.
+        </p>
+        <div id="vis3" class="vis-container" style="padding-bottom: 50px;"></div>
+
 
         <div class="tooltip">
             <h2><sup>&#8505;</sup> Yearly Number of Deaths by Country in Years 2015 and 2022</h2>
             <span class="tooltipText">Interact with the <b>slider</b> to change years.<br/>Interact with the <b>drop-down list</b> to change countries.<br/><u>If no data are shown, probably there's no data for the country chosen.</u></span>
         </div>
+
+        <p>
+            According to <a href="https://github.com/akarlinsky/world_mortality/blob/main/world_mortality.csv" noreferrer" onclick="alert('Redirect Notice\nYou are leaving this page. Thanks for viewing!')">Karlinsky & Korbak</a> from GitHub where the data is published on 2021, it is collected <b>since the start of COVID-19 pandemic.</b> This line chart is created to visualise the number of deaths in a comparison of years so that people can be aware with it.<br/><br/>In general, <b style="color:orangered">the number of deaths rises at the time when the pandemic starts and worsen</b>, and it seems to become normal after that time.<br/><br/>Feel free to change the country and drag the year filter for comparison.
+        </p>
         <div id="vis4" class="vis-container"></div>
     </div>
 
     <div class="page">
         <div class="tooltip">
             <h2><sup>&#8505;</sup> Yearly CO<sub>2</sub> Consumption in The World in Years 1949 to 2020</h2>
-            <span class="tooltipText">Interact with the drop-down list to select country<br/>You can click and drag the second chart for detail look.</span>
+            <span class="tooltipText">Interact with the drop-down list to select country<br/>You can click and drag the second chart for detailed look.</span>
         </div>
-        <div id="vis5" class="vis-container"></div>
+
+        <p style="padding-bottom:20px;">
+            CO<sub>2</sub> is one of the greenhouse gases being emitted to the atmosphere by us everyday. Not only while we breathes, CO<sub>2</sub> produces from other sources like vehicles and refrigerants. Thus, the chart and a map below shows <b>the amount of CO<sub>2</sub> emitted between 2 centuries.</b>
+        </p>
+        <div id="vis5" class="vis-container" style="padding-bottom: 50px;"></div>
 
         <div class="tooltip">
             <h2><sup>&#8505;</sup> Comparison of Yearly CO<sub>2</sub> Consumption in the World in Years 1949 to 2020</h2>
             <span class="tooltipText">Interact with the sliders to view <b>year changes</b> and <b>map scaling.</b></span>
         </div>
+
+        <p style="padding-bottom:20px;">
+            In short, the map below shows that <b style="color:orangered;">US has the most CO<sub>2</sub> emissions</b> in the world in year 1949, and decreased gradually until year 2020.
+        </p>
         <div id="vis6" class="vis-container"></div>
     </div>
 
     <!--Footer-->
     <div class="div-footer">
-        <p>No copyright &copy 2022 &#8901; Webpage created by HongJie Chang &#8901; Last modified 18/10/2022 &#8901; <a href="https://github.com/hongjchang/FIT3179Assignment2" target="_blank" rel="noopener noreferrer" onclick="alert('Redirect Notice\nYou are about to going to my GitHub repository.');">GitHub repository</a></p>
+        <p style="font-family:'Ubuntu', sans-serif; text-align: left;">No copyright &copy 2022 &#8901; Webpage created by HongJie Chang &#8901; All sources are referenced in readme in <a href="https://github.com/hongjchang/FIT3179Assignment2" target="_blank" rel="noopener noreferrer" onclick="alert('Redirect Notice\nYou are about to going to this webpage\'s GitHub repository.');">my GitHub repository</a> &#8901; Last modified 18/10/2022</p>
     </div>
 
     <!--Script for embeds-->

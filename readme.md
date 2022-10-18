@@ -11,7 +11,7 @@
 
 **Assignment Submitted Version:** 17/10/2022 (`Commit6`)
 
-**Final Version:** 18/10/2022 (`Commit#`)
+**Final Version:** 18/10/2022 (`Commit8`)
 
 **References:**
 - This whole directory was pre-created after the completion of Week9Homework.
@@ -46,6 +46,7 @@
     - W3Schools (2022). Create tooltips. Retrieved from: https://www.w3schools.com/howto/howto_css_tooltip.asp
     - StackOverflow (2014). How to make a closable banner in pure javascript. Retrieved from: https://stackoverflow.com/a/26957495
     - Google (2022). Ubuntu font style. Retrieved from: https://fonts.google.com/share?selection.family=Ubuntu
+    - W3Schools (2022). HTML Responsive Web design. Retrieved from: https://www.w3schools.com/html/html_responsive.asp
 
 - From Week10Homework:
     - The `oceans.topojson` file **had changed** and was adapted from [here](https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson).
